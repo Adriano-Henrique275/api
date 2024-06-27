@@ -4,9 +4,9 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "start": "vercel dev",
-    "deploy": "vercel deploy --prod",
-    "build": "vercel build --output public && tsc && prisma generate",
+    "start": "node dist/server.js",
+    "deploy": "tsc",
+    "build": "tsc && prisma generate",
     "migrate": "prisma migrate deploy"
   },
   "keywords": [],

@@ -31,6 +31,21 @@ export default class DatabaseService {
     });
   }
 
+  getUserByPhone(
+    phone: string,
+    includeAppointment: boolean = false,
+    includeDoctor: boolean = false
+  ) {
+    return this.connection.patient.findUnique({
+      where: { phone },
+      include: {
+        appointment: !includeAppointment
+          ? false
+          : { include: { doctor: includeDoctor } },
+      },
+    });
+  }
+
   createUser(phone: string, password: string) {
     return this.connection.user.create({
       data: {

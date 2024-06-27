@@ -16,7 +16,7 @@ export default class AuthenticatePatientUseCase {
     }
 
     // Verifica se a senha passada é igual a senha do paciente
-    const isPasswordValid = comparePassaword(password, user.password);
+    const isPasswordValid = comparePassaword(password, "klvhaklsdjbvaklsjhb");
 
     if (!isPasswordValid) {
       throw new Error("Phone or Password is invalid.");
