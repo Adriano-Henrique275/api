@@ -1,0 +1,24 @@
+GET http://localhost:3333/doctors
+
+###
+GET http://localhost:3333/patient/555513254654
+
+###
+POST http://localhost:3333/patient
+Content-Type: application/json
+
+{
+  "name": "Adriano",
+  "phone": "5551900010001",
+  "password": "12345"
+}
+
+###
+POST http://localhost:3333/patient/1/appointment
+Content-Type: application/json
+Authorization: {{$aadToken}}
+
+{
+  "patientId": 1,
+  "agendaId": 1
+}
