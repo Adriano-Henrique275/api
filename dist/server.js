@@ -1,11 +1,13 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.init = init;
-const app_1 = __importDefault(require("@/app"));
+const app_1 = __importDefault(require("./app"));
 function init() {
-    app_1.default.start(3333);
+  app_1.default.start(3333);
 }
 init();
