@@ -6,8 +6,8 @@
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
     "deploy": "tsc",
-    "build": "tsc && prisma generate",
-    "migrate": "prisma migrate deploy"
+    "vercel-build": "prisma migrate deploy",
+    "build": "tsc && prisma generate"
   },
   "keywords": [],
   "author": "",
