@@ -1,16 +1,16 @@
 GET http://localhost:3333/doctors
 
 ###
-GET http://localhost:3333/patient/555513254654
+GET http://localhost:3333/patient/555190003434
 
 ###
 POST http://localhost:3333/patient
 Content-Type: application/json
 
 {
-  "name": "Adriano",
-  "phone": "5551900010001",
-  "password": "12345"
+  "name": "Adriano dev",
+  "phone": "555190003434",
+  "password": "5432"
 }
 
 ###
